@@ -39,6 +39,7 @@
 ```
     swap(a, b)
 ```
+or you can use
 ```
     a ^= b;
     b ^= a;
@@ -54,9 +55,11 @@
 ```
     __gcd(a, b)
 ```
+or you can use
 ```
     ll gcd(ll a, ll b){return b ? gcd(b, a % b) : a;}
 ```
+or you can use
 ```
     ll gcd(ll a,ll b){ll r; while(b){r = a % b; a = b; b = r;} return a;}
 ```
@@ -103,7 +106,7 @@
         }
     }
 ```
-or you can use Use Sieve of Eratosthenes
+or you can use Sieve of Eratosthenes
 
 #### 14. LCM of a number
 ```
@@ -127,17 +130,20 @@ or you can use Use Sieve of Eratosthenes
     }
 ```
 
-
-16. Check if a number is a power of two
+#### 16. Check if a number is a power of two
+```
     bool isPowerOfTwo(int n){
         return n && (!(n&(n-1)));
-    }
+    }   
+```
 
-
-17. Copy elements of one array to another
+#### 17. Copy elements of one array to another
+```
     copy_n(source, n, destination);
+```
 
-18. Finding nth Root of a Number
+#### 18. Finding nth Root of a Number
+```
     long double nthRoot(ll A, ll N)
     {
         // intially guessing a random number between
@@ -166,30 +172,36 @@ or you can use Use Sieve of Eratosthenes
         }
 
         return xK;
+    }  
+```
+
+#### 19. Getting frequency of characters in a string
+```
+    void getFrequency(string strInput,map<char,int> & fMap)
+    {
+         map<char,int>::iterator it; //iterator to find the entries in map
+         for(int i = 0 ; i < strInput.length() ; i++ )
+         {
+              char ch = strInput.at(i);
+              it = fMap.find(ch); //find the character in the map
+              if( it == fMap.end() ) //if not present in the map
+              {
+                    fMap.insert( make_pair(ch,1) );//add an entry
+              }
+              else
+              {
+                    it->second++; //else increment the frequency
+              }
+        }
     }
-
-
-void getFrequency(string strInput,map<char,int> & fMap)
-{
- map<char,int>::iterator it; //iterator to find the entries in map
- for(int i = 0 ; i < strInput.length() ; i++ )
- {
-      char ch = strInput.at(i);
-      it = fMap.find(ch); //find the character in the map
-      if( it == fMap.end() ) //if not present in the map
-      {
-            fMap.insert( make_pair(ch,1) );//add an entry
-      }
-      else
-      {
-            it->second++; //else increment the frequency
-      }
-}
-void printFrequency(map<char,int> & fMap)
-{
-     map<char,int>::iterator it;//iterator to loop through all the chars
-     for( it = fMap.begin() ; it != fMap.end() ; ++it )
-     {
-        cout<<"["<< it->first<<"]"<<"->"<<it->second<<endl;
-     }
-}
+```
+```
+    void printFrequency(map<char,int> & fMap)
+    {
+         map<char,int>::iterator it;//iterator to loop through all the chars
+         for( it = fMap.begin() ; it != fMap.end() ; ++it )
+         {
+            cout<<"["<< it->first<<"]"<<"->"<<it->second<<endl;
+         }
+    }   
+```
