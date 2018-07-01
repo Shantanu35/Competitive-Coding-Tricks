@@ -1,0 +1,54 @@
+# Your snippets
+#
+# Atom snippets allow you to enter a simple prefix in the editor and hit tab to
+# expand the prefix into a larger code block with templated values.
+#
+# You can create a new snippet in this file by typing "snip" and then hitting
+# tab.
+#
+# An example CoffeeScript snippet to expand log to console.log:
+#
+# '.source.coffee':
+#   'Console log':
+#     'prefix': 'log'
+#     'body': 'console.log $1'
+#
+# Each scope (e.g. '.source.coffee' above) can only be declared once.
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it in the
+# Atom Flight Manual:
+# http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson.
+
+'.source.cpp':
+  'Competitive Coding Template':
+    'prefix': 'hello'
+    'body': """
+    // Tanmay Singhal
+
+    #include <bits/stdc++.h>
+    #define pb emplace_back
+    #define in insert
+    #define ms(s, n) memset(s, n, sizeof(s))
+    #define FOR(i, a, b) for (long long i = (a); i < (b); i++)
+    #define FORd(i, a, b) for (long long i = (a) - 1; i >= (b); i--)
+    #define what_is(x) cerr << #x << " is " << x << endl;
+    #define fi first;
+    #define se second;
+    #define FORall(it, a) for (__typeof((a).begin()) it = (a).begin(); it != (a).end(); it++)
+    typedef long long ll;
+    typedef unsigned long long ull;
+    typedef long double ld;
+    const double pi = 2 * acos(0.0);
+    using namespace std;
+
+    int main()
+    {
+        ios_base::sync_with_stdio(false);
+        cin.tie(0);
+        cout.tie(0);
+
+        $1
+    }
+
+"""
